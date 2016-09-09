@@ -20,16 +20,19 @@
   <script src="node_modules/zone.js/dist/zone.js"></script>
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
+
 </head>
 
 <body>
   <event-view-app>Loading...</event-view-app>
 
-  <script>
+  <script src='dist/bundle.js'></script>
+
+  <!--<script>
     System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
-  </script>
+  </script>-->
 
 </body>
 

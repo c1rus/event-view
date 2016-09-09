@@ -4,6 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { CanActivateAuthGuard, CanDeactivateGuard, UserProfileService } from './core';
 import { PageNotFoundComponent } from './page-not-found.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SessionsComponent } from './sessions/sessions.component';
+import { SpeakersComponent } from './speakers/speakers.component';
+
 /***************************************************************
 * Lazy Loading to Eager Loading
 *
@@ -21,9 +25,9 @@ const routes: Routes = [
     canActivate: [CanActivateAuthGuard],
     canLoad: [CanActivateAuthGuard],
   },
-  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
-  { path: 'speakers', loadChildren: 'app/speakers/speakers.module#SpeakersModule', },
-  { path: 'sessions', loadChildren: 'app/sessions/sessions.module#SessionsModule', },
+  { path: 'dashboard', pathMatch: 'full', component: DashboardComponent },
+  { path: 'speakers', pathMatch: 'full', component: SpeakersComponent },
+  { path: 'sessions', pathMatch: 'full', component: SessionsComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 

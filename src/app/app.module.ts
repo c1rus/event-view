@@ -14,6 +14,10 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
 
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SpeakersModule } from './speakers/speakers.module';
+import { SessionsModule } from './sessions/sessions.module';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,12 +27,19 @@ import { LoginModule } from './login/login.module';
     // Routes get loaded in order. It is important that login
     // come before AppRoutingModule, as
     // AppRoutingModule defines the catch-all ** route
-    AppRoutingModule,
     CoreModule,
+
+    AppRoutingModule,
+    DashboardModule,
+    SpeakersModule,
+    SessionsModule
+
     // InMemoryWebApiModule.forRoot(InMemoryStoreService, { delay: 600 }),
   ],
   declarations: [AppComponent, PageNotFoundComponent],
-  providers: [SpeakerService],
+  providers: [
+    SpeakerService
+    ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
