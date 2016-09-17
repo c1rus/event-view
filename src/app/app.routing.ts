@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 /***************************************************************
 * Lazy Loading to Eager Loading
 *
-* 1. Remove the module and NgModule imports in `app.module.ts`
+* 1. Add the module and NgModule imports in `app.module.ts`
 *
 * 2. Remove the lazy load route from `app.routing.ts`
 *
