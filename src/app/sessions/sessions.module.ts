@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { SessionButtonComponent } from './shared/session-button/Session-button.component';
 
-import { routedComponents, SessionsRoutingModule } from './sessions.routing';
+import { routedComponents, SessionsRoutingModule } from './sessions-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { SessionService } from './shared/session.service';
 
