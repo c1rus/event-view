@@ -10,7 +10,9 @@
     "postinstall": "typings install",
     "tsc": "tsc -p ./src",
     "tsc:w": "tsc -w -p ./src",
-    "typings": "typings"
+    "typings": "typings",
+    "build": "gulp build && http-server dist",
+    "build-gzip": "gulp build-gzip && http-server dist"
   },
   "private": true,
   "dependencies": {

@@ -3,8 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 
+import { AuthGuard, CanDeactivateGuard, UserProfileService } from '../core';
+
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  // { path: '', component: AdminComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+    canLoad: [AuthGuard],
+  },
 ];
 
 @NgModule({

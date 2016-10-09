@@ -15,16 +15,16 @@ import { PageNotFoundComponent } from './page-not-found.component';
 *****************************************************************/
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard', },
-  {
-    path: 'admin',
-    loadChildren: 'app/admin/admin.module#AdminModule',
-    canActivate: [AuthGuard],
-    canActivateChild: [AuthGuard],
-    canLoad: [AuthGuard],
-  },
-  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
-  { path: 'speakers', loadChildren: 'app/speakers/speakers.module#SpeakersModule', },
-  { path: 'sessions', loadChildren: 'app/sessions/sessions.module#SessionsModule', },
+  // {
+  //   path: 'admin',
+  //   loadChildren: 'app/admin/admin.module#AdminModule',
+  //   canActivate: [AuthGuard],
+  //   canActivateChild: [AuthGuard],
+  //   canLoad: [AuthGuard],
+  // },
+  // { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+  // { path: 'speakers', loadChildren: 'app/speakers/speakers.module#SpeakersModule', },
+  // { path: 'sessions', loadChildren: 'app/sessions/sessions.module#SessionsModule', },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 

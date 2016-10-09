@@ -8,7 +8,8 @@ import { CanDeactivateGuard } from '../core';
 
 const routes: Routes = [
   {
-    path: '',
+    // path: '',
+    path: 'speakers',
     component: SpeakersComponent,
     children: [
       { path: '', component: SpeakerListComponent },
