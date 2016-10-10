@@ -50,10 +50,7 @@ gulp.task('copy-aot-gzip', ['gzip'], function (done) {
 
 gulp.task('copy-js', function () {
   log('copying js');
-  let js = [
-    'node_modules/core-js/client/shim.min.js',
-    'node_modules/zone.js/dist/zone.min.js'
-  ];
+  let js = config.plugins;
 
   return gulp.src(js)
     .pipe(gulp.dest(config.dist.js));
