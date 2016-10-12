@@ -10,6 +10,8 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
-    "app/*-aot.ts"
+    "*-aot.ts",
+    "app/*-aot.ts",
+    "aot/**/*"
   ]
 }
