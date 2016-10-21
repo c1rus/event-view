@@ -7,10 +7,8 @@
     "start": "npm run tsc && concurrently \"npm run tsc:w\" \"lite-server\" ",
     "lint": "tslint ./app/**/*.ts -t verbose",
     "lite": "lite-server",
-    "postinstall": "typings install",
     "tsc": "tsc -p ./src",
-    "tsc:w": "tsc -w -p ./src",
-    "typings": "typings"
+    "tsc:w": "tsc -w -p ./src"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +34,9 @@
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "@types/jasmine": "^2.5.35",
+    "@types/selenium-webdriver": "^2.53.32"
   }
 }
