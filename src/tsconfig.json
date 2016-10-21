@@ -6,7 +6,10 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
-    "suppressImplicitAnyIndexErrors": true
+    "typeRoots": [
+      "../node_modules/@types/"
+    ]
   }
 }
