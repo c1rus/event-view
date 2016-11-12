@@ -5,7 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "npm run tsc && concurrently \"npm run tsc:w\" \"lite-server\" ",
-    "lint": "tslint ./app/**/*.ts -t verbose",
+    "lint": "tslint ./src/**/*.ts -t verbose",
     "lite": "lite-server",
     "tsc": "tsc -p ./src",
     "tsc:w": "tsc -w -p ./src"
