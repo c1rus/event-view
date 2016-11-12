@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: SessionListComponent,
+        component: SessionListComponent
       },
       {
         path: ':id',
@@ -23,9 +23,9 @@ const routes: Routes = [
         resolve: {
           session: SessionResolver
         }
-      },
+      }
     ]
-  },
+  }
 ];
 
 @NgModule({

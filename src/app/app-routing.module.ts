@@ -15,12 +15,12 @@ import { PreloadSelectedModulesList } from './core/preload-strategy';
 * 3. Change the module's default route path from '' to 'pathname'
 *****************************************************************/
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboard', },
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
   {
     path: 'admin',
     loadChildren: 'app/admin/admin.module#AdminModule',
     canActivate: [AuthGuard],
-    canLoad: [AuthGuard],
+    canLoad: [AuthGuard]
   },
   {
     path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
@@ -31,7 +31,7 @@ const routes: Routes = [
     data: { preload: true }
   },
   { path: 'sessions', loadChildren: 'app/sessions/sessions.module#SessionsModule' },
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
+  { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
 ];
 
 @NgModule({

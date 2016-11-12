@@ -1,6 +1,9 @@
 {
   "rules": {
-    "max-line-length": [true, 100],
+    "max-line-length": [
+      true,
+      100
+    ],
     "no-inferrable-types": true,
     "class-name": true,
     "comment-format": [
@@ -21,6 +24,13 @@
     "no-shadowed-variable": true,
     "no-unused-expression": true,
     "no-unused-variable": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
     "one-line": [
       true,
       "check-catch",
@@ -33,7 +43,10 @@
       "single",
       "avoid-escape"
     ],
-    "semicolon": [true, "always"],
+    "semicolon": [
+      true,
+      "always"
+    ],
     "typedef-whitespace": [
       true,
       {
@@ -58,14 +71,6 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ],
-    "component-selector-name": [true, "kebab-case"],
-    "component-selector-type": [true, "element"],
-    "host-parameter-decorator": true,
-    "input-parameter-decorator": true,
-    "output-parameter-decorator": true,
-    "attribute-parameter-decorator": true,
-    "input-property-directive": true,
-    "output-property-directive": true
+    ]
   }
 }
